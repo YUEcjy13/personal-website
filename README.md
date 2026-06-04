@@ -16,7 +16,7 @@ npm run dev
 
 ## Public Links
 
-- 主站：[https://personal-website.vercel.app/](https://personal-website.vercel.app/)
+- 主站：[https://personal-website-delta-sable-76.vercel.app/](https://personal-website-delta-sable-76.vercel.app/)
 - 镜像：[https://YUEcjy13.github.io/personal-website/](https://YUEcjy13.github.io/personal-website/)
 - 仓库：[https://github.com/YUEcjy13/personal-website](https://github.com/YUEcjy13/personal-website)
 
@@ -58,7 +58,7 @@ npm run build
 4. 输出目录固定为 `dist`
 
 正式地址：
-[https://personal-website.vercel.app/](https://personal-website.vercel.app/)
+[https://personal-website-delta-sable-76.vercel.app/](https://personal-website-delta-sable-76.vercel.app/)
 
 ## Update Workflow
 

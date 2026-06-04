@@ -35,7 +35,7 @@ window.siteData = {
     ],
     quickLinks: [
       { label: "Email", href: "mailto:cjy020805@163.com", style: "primary" },
-      { label: "Website", href: "https://personal-website.vercel.app/", style: "secondary" },
+      { label: "Website", href: "https://personal-website-delta-sable-76.vercel.app/", style: "secondary" },
       { label: "GitHub", href: "https://github.com/YUEcjy13", style: "secondary" },
       { label: "Resume", href: "assets/docs/resume.pdf", style: "secondary" }
     ],
@@ -54,7 +54,7 @@ window.siteData = {
     { label: "Contact", href: "#contact" }
   ],
   deployment: {
-    liveSite: "https://personal-website.vercel.app/",
+    liveSite: "https://personal-website-delta-sable-76.vercel.app/",
     mirrorSite: "https://YUEcjy13.github.io/personal-website/",
     githubRepo: "https://github.com/YUEcjy13/personal-website"
   },
