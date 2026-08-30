@@ -32,7 +32,7 @@ window.siteContent = {
     {
       key: "bifocus",
       venue: "CIKM 2026",
-      status: "Accepted",
+      status: "Poster Presentation",
       title: "BiFocus: Evidence-Grounded Patch and Query-Token Calibration for Visual Document Retrieval",
       authors: "Jiangyue Chen, Li Yao, Yuanyang Zhang, Xinwei Li",
       summary: "BiFocus calibrates both page-side visual evidence and query-token contribution in late-interaction visual document retrieval using explicit evidence boxes during training, while keeping inference free of boxes, OCR regions, and teacher attention.",
@@ -48,7 +48,7 @@ window.siteContent = {
     {
       key: "tgr-net",
       venue: "CIKM 2026",
-      status: "Accepted",
+      status: "Oral Presentation",
       title: "Prompt Contamination in Realistic Universal Cross-Domain Retrieval: Diagnosis and Text-Guided Rectification",
       authors: "Jiangyue Chen, Li Yao, Yuanyang Zhang, Xinwei Li",
       summary: "TGR-Net introduces DomainCOCO, a realistic universal cross-domain retrieval benchmark with cluttered multi-object scenes, and rectifies distractor-dominated visual evidence before prompt generation for label-free retrieval.",

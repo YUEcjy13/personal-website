@@ -9,7 +9,7 @@
     <article class="publication" id="${paper.key}">
       <div class="publication-thumb-wrap">
         <img class="publication-thumb" src="${paper.image}" alt="${paper.imageAlt}" loading="lazy" />
-        <span class="badge">${paper.venue}</span>
+        <span class="badge">${paper.venue} · ${paper.status}</span>
       </div>
       <div>
         <h3><a href="${paper.links[0].href}" target="_blank" rel="noreferrer">${paper.title}</a></h3>
