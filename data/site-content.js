@@ -14,7 +14,7 @@ window.siteContent = {
   ],
   news: [
     {
-      date: "2026-11",
+      date: "2026-09",
       text: "My Agent Harness paper, <strong>Beyond Failed Trajectories</strong>, is under review at <strong>ICLR 2027</strong>."
     },
     {
@@ -35,8 +35,8 @@ window.siteContent = {
       year: 2027,
       selected: true,
       topics: ["Agent Harness"],
-      image: "assets/images/research/proactive-iht-paper.png",
-      imageAlt: "First page of the Proactive IHT manuscript.",
+      image: "assets/images/research/proactive-iht-method.png",
+      imageAlt: "Proactive IHT method overview showing three observability levels, evidence acquisition, diagnosis, and repair.",
       title: "Beyond Failed Trajectories: Diagnosing and Repairing LLM Agent Harnesses Across Three Observability Levels",
       authors: "Anonymous submission (double-blind review)",
       venue: "ICLR 2027 · Under Review",
