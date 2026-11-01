@@ -6,13 +6,17 @@ window.siteContent = {
     email: "cjy020805@seu.edu.cn",
     github: "https://github.com/YUEcjy13",
     openreview: "https://openreview.net/profile?id=%7EJiangyue_Chen2",
-    cv: "assets/docs/jiangyue-chen-cv-chinese.pdf"
+    cv: "assets/docs/jiangyue-chen-cv-2026.pdf"
   },
   about: [
     "Hello! I am currently an M.S. student at <a href=\"https://www.seu.edu.cn/\" target=\"_blank\" rel=\"noopener\">Southeast University</a>, supervised by <a href=\"https://cs.seu.edu.cn/yaoli/main.htm\" target=\"_blank\" rel=\"noopener\">Prof. Li Yao</a>. If you are interested in our research topics or would like to discuss ideas, please feel free to contact me via <a href=\"mailto:cjy020805@seu.edu.cn\">email</a> or <a href=\"https://yuecjy13.github.io/personal-website/assets/images/contact/wechat-qr.jpg\" target=\"_blank\" rel=\"noopener\">WeChat</a>.",
     "My research combines academic work at Southeast University with practical research during my industry internship, focusing on <strong>Agent Harness</strong>, <strong>large language models</strong>, and <strong>multimodal retrieval</strong>."
   ],
   news: [
+    {
+      date: "2026-11",
+      text: "My Agent Harness paper, <strong>Beyond Failed Trajectories</strong>, is under review at <strong>ICLR 2027</strong>."
+    },
     {
       date: "2026-09",
       text: "<strong>TGR-Net</strong> has been selected for an <strong>Oral Presentation</strong> at CIKM 2026; <strong>BiFocus</strong> will be presented as a <strong>Poster</strong>."
@@ -27,6 +31,21 @@ window.siteContent = {
     }
   ],
   publications: [
+    {
+      year: 2027,
+      selected: true,
+      topics: ["Agent Harness"],
+      image: "assets/images/research/proactive-iht-paper.png",
+      imageAlt: "First page of the Proactive IHT manuscript.",
+      title: "Beyond Failed Trajectories: Diagnosing and Repairing LLM Agent Harnesses Across Three Observability Levels",
+      authors: "Anonymous submission (double-blind review)",
+      venue: "ICLR 2027 · Under Review",
+      presentation: "📝 Under Review",
+      highlighted: true,
+      links: [
+        { label: "Paper", href: "assets/docs/proactive-iht-iclr-2027-under-review.pdf" }
+      ]
+    },
     {
       year: 2026,
       selected: true,
@@ -80,8 +99,16 @@ window.siteContent = {
   ],
   experience: [
     {
+      institution: "Baidu",
+      date: "Oct. 28, 2026 — Present",
+      role: "Agent Strategy Engineer Intern · Baidu Health",
+      detail: "Design and optimize the closed-loop self-evolution framework for Baidu Health's Nearline Baikan project, focusing on Agentic Looping, tool scheduling, and intelligent routing.",
+      logo: "assets/images/experience/baidu-logo.png",
+      logoAlt: "Baidu logo"
+    },
+    {
       institution: "HONOR",
-      date: "Jul. 2026 — Nov. 2026",
+      date: "Jul. 15, 2026 — Oct. 23, 2026",
       role: "Large Language Model Algorithm Engineer Intern",
       detail: "Research on agent harness optimization and large language models, with a focus on producing research outcomes in these areas.",
       logo: "assets/images/experience/honor-logo.png",
