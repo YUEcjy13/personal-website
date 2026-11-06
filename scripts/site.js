@@ -20,18 +20,18 @@
     <article class="publication-card">
       <div class="pub-image-cell"><img src="${paper.image}" alt="${paper.imageAlt}" loading="lazy" /></div>
       <div class="pub-text-cell">
-        <div class="publication-title"><a href="${paper.links[0].href}" target="_blank" rel="noopener">${paper.title}</a></div>
-        <div class="publication-authors">${paper.authors}</div>
-        <div class="publication-meta">
+        <div class="publication-title">${paper.links.length ? `<a href="${paper.links[0].href}" target="_blank" rel="noopener">${paper.title}</a>` : paper.title}</div>
+        ${paper.authors ? `<div class="publication-authors">${paper.authors}</div>` : ""}
+        ${paper.venue || paper.links.length ? `<div class="publication-meta">
           <span class="publication-venue${paper.highlighted ? " highlighted" : ""}">${paper.venue}</span>
           <span class="meta-sep">·</span>
           <span class="publication-links">${paper.links.map(link).join(" ")}</span>
-        </div>
-        <span class="pub-badge">${paper.presentation}</span>
+        </div>` : ""}
+        ${paper.presentation ? `<span class="pub-badge">${paper.presentation}</span>` : ""}
       </div>
     </article>`;
 
-  const years = [...new Set(data.publications.map((paper) => paper.year))].sort((a, b) => b - a);
+  const years = [...new Set(data.publications.map((paper) => paper.year).filter(Number.isInteger))].sort((a, b) => b - a);
   const topics = [...new Set(data.publications.flatMap((paper) => paper.topics))];
 
   app.innerHTML = `
@@ -48,7 +48,7 @@
         <div class="profile-info">
           <h1 id="profile-name">${data.profile.name} (陈江悦)</h1>
           <p>${data.about.join("</p><p>")}</p>
-          <p class="profile-links"><a href="mailto:${data.profile.email}">Email</a> <span>/</span><a href="${data.profile.github}" target="_blank" rel="noopener">GitHub</a> <span>/</span><a href="${data.profile.openreview}" target="_blank" rel="noopener">OpenReview</a> <span>/</span><a href="${data.profile.cv}" target="_blank" rel="noopener">CV (Chinese)</a></p>
+          <p class="profile-links"><a href="mailto:${data.profile.email}">Email</a> <span>/</span><a href="${data.profile.github}" target="_blank" rel="noopener">GitHub</a> <span>/</span><a href="${data.profile.openreview}" target="_blank" rel="noopener">OpenReview</a></p>
         </div>
         <div class="profile-photo"><div class="photo-wrap"><img src="${data.profile.avatar}" alt="Portrait of ${data.profile.name}" /></div></div>
       </section>
@@ -76,7 +76,7 @@
   const topicButton = document.querySelector("#show-topic");
   const activate = (button) => [selectedButton, dateButton, topicButton].forEach((item) => item.classList.toggle("active", item === button));
   const showSelected = () => { activate(selectedButton); publicationList.innerHTML = data.publications.filter((paper) => paper.selected).map(renderPublication).join(""); };
-  const showByDate = () => { activate(dateButton); publicationList.innerHTML = years.map((year) => `<h3 class="pub-sticky-header">${year}</h3>${data.publications.filter((paper) => paper.year === year).map(renderPublication).join("")}`).join(""); };
+  const showByDate = () => { activate(dateButton); publicationList.innerHTML = data.publications.filter((paper) => !paper.year).map(renderPublication).join("") + years.map((year) => `<h3 class="pub-sticky-header">${year}</h3>${data.publications.filter((paper) => paper.year === year).map(renderPublication).join("")}`).join(""); };
   const showByTopic = () => { activate(topicButton); publicationList.innerHTML = topics.map((topic) => `<h3 class="pub-sticky-header">${topic}</h3>${data.publications.filter((paper) => paper.topics.includes(topic)).map(renderPublication).join("")}`).join(""); };
   selectedButton.addEventListener("click", showSelected);
   dateButton.addEventListener("click", showByDate);
